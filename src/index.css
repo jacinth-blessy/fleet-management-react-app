@@ -35,3 +35,8 @@ body {
   padding :10px;
   background:#ccc;
 }
+
+img{
+  width : 400px;
+  height : 350px;
+}
