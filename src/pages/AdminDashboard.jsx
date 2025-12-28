@@ -1,7 +1,7 @@
-import { useCallback } from "react";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import FleetCard from "../components/FleetCard";
+import { useCallback, useState } from "react";
+import Navbar from "../components/Navbar.jsx";
+import Sidebar from "../components/Sidebar.jsx";
+import FleetCard from "../components/FleetCard.jsx";
 
 const AdminDashboard = () => {
     const [fleets, setFleets] = useState([]);
@@ -13,8 +13,8 @@ const AdminDashboard = () => {
     }, []);
 
 
-    const toggleAvailabity = useCallback((id) => {
-        setFleets((prev) => prev.map((fleet) => fleet.id === id?{...fleet, available:fleet.available === "Available" ? "Unavailable" : "Available",} :fleet));
+    const toggleAvailability = useCallback((id) => {
+        setFleets((prev) => prev.map((fleet) => fleet.id === id?{...fleet, available:fleet.available === "Available"?"Unavailable":"Available",} :fleet));
     }, []);
 
     const deleteFleet = (id) => {
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
             <Sidebar setFleets = {setFleets} />
             <div className = "cards">
                 {fleets.map((fleet) => (
-                 <FleetCard key = {fleet.id}  fleet = {fleet} onUpdateDriver = {updateDriver} onToggleAvailability = {toggleAvailabity} onDelete = {deleteFleet} />))}
+                 <FleetCard key = {fleet.id}  fleet = {fleet} onUpdateDriver = {updateDriver} onToggleAvailabilty = {toggleAvailability} onDelete = {deleteFleet} />))}
             </div>
        </div>
         </>

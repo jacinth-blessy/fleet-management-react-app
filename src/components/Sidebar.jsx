@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Sidebar = ({setFleets}) => {
     const [form, setForm] = useState({
         regNo : "",
@@ -30,20 +32,20 @@ const Sidebar = ({setFleets}) => {
 
     return (
         <div className = "sidebar">
-            <h3> Add Fleet</h3>
-            <input name = "regNo" placeholder = "Vehicle Reg No" value = {form.regNo} onChange = {handleChange} />
+            <h3> Add Fleet</h3><br></br><br></br>
+            <input name = "regNo" placeholder = "Vehicle Reg No" value = {form.regNo} onChange = {handleChange} /><br></br>
             <select name = "category" value = {form.category} onChange = {handleChange}>
                 <option value = "">Select Category</option>
                 <option>Auto</option>
                 <option>Bus</option>
                 <option>Truck</option>
                 <option>Car</option>
-            </select>
-            <input name = "driver" placeholder = "Driver Name" value = {form.driver} onchange = {handleChange}/>
+            </select><br></br>
+            <input name = "driver" placeholder = "Driver Name" value = {form.driver} onChange = {handleChange}/><br></br>
             <select name = "available" value = {form.available} onChange = {handleChange}>
                 <option>Available</option>
                 <option>Unavailable</option>
-            </select>
+            </select><br></br><br></br>
             <button onClick={addFleet}>Add Fleet</button>
         </div>
     );

@@ -1,3 +1,5 @@
+import React from "react";
+
 const FleetCard = ({fleet, onUpdateDriver, onToggleAvailabilty, onDelete}) => {
     return (
         <div className = "card">
@@ -7,9 +9,9 @@ const FleetCard = ({fleet, onUpdateDriver, onToggleAvailabilty, onDelete}) => {
             <p><b>Driver:</b>{fleet.driver}</p>
             <p><b>Status:</b>{fleet.available}</p>
 
-            <button onClick = {() => onUpdateDriver(fleet.id)}>Update Driver</button>
-            <button onClick = {() => onToggleAvailabilty(fleet.id)}>Toggle Aavailability</button>
-            <button onClick = {() => onDelete(fleet.id)}>Delete</button>
+            <button onClick = {() => onUpdateDriver(fleet.id)}>Update Driver</button><br></br>
+            <button onClick = {() => onToggleAvailabilty(fleet.id)}>Toggle Availability</button><br></br>
+            <button onClick = {() => onDelete(fleet.id)}>Delete</button><br></br>
         </div>
     );
 };
