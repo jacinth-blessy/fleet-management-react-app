@@ -3,7 +3,7 @@ import React from "react";
 const FleetCard = ({fleet, onUpdateDriver, onToggleAvailabilty, onDelete}) => {
     return (
         <div className = "card">
-            <img src= "https://via.placeholder.com/150" alt = "Vehicle" />
+            <img src= "https://wallpapers.com/images/high/futuristic-sports-car-sunset-backdrop-ofy8lzl2nv95fdri.webp" alt = "Vehicle" />
             <p><b>Reg No:</b>{fleet.regNo}</p>
             <p><b>Category:</b>{fleet.category}</p>
             <p><b>Driver:</b>{fleet.driver}</p>
